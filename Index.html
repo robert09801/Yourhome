@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .signup-container {
+      background-color: #222;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      width: 400px;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      text-align: center;
+      color: #fff;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      color: #ccc;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+      border: 1px solid #555;
+      border-radius: 4px;
+      color: #000; /* Text color is adjusted for better visibility on dark background */
+      background-color: #fff; /* Input background color */
+    }
+
+    button {
+      background-color: #3498db;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .footer-text {
+      text-align: center;
+      margin-top: 20px;
+      color: #ccc;
+    }
+
+    .error {
+      color: #e74c3c;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h2 style="color:azure;">✍️Signup✍️</h2>
+    <form id="signupForm" action="#" method="post">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <label for="Phone Number">Phone number:</label>
+      <input type="text" id="Phone Number" name="Phone Numner" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="button" onclick="validateForm()">Sign Up</button>
+
+      <p class="error" id="error-message"></p>
+    </form>
+    <p class="footer-text">Already have an account? <a href="https://promoters01792.blogspot.com/2023/12/login.html?m=1">Log In</a></p>
+
+    <script>
+      function validateForm() {
+        var username = document.getElementById('username').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var errorMessage = document.getElementById('error-message');
+
+       //  Simple validation, you can enhance this based on your requirements
+        if (username === '' || email === '' || password === '') {
+          errorMessage.textContent = 'Please fill in all fields.';
+        } else {
+          errorMessage.textContent = ''; // Clear any previous error message
+          // Here you can submit the form or perform any additional actions
+          alert('Signup successfull!---Login now')('login now');
+        }
+      }
+    </script>
+</div>
+</body>
